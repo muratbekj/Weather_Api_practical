@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="city1">City 1:</label>
+        <input type="text" id="city1" name="city1" required><br>
+      
+        <label for="city2">City 2:</label>
+        <input type="text" id="city2" name="city2"><br>
+      
+        <button type="submit">Get Weather</button>
+      </form>
+      
+      {% if weather_data1 %}
+        <h2>Weather for {{ weather_data1.city }}</h2>
+        <p>Temperature: {{ weather_data1.temperature }} °C</p>
+        <p>Description: {{ weather_data1.description }}</p>
+        <img src="http://openweathermap.org/img/wn/{{ weather_data1.icon }}.png" alt="Weather Icon">
+      {% endif %}
+      
+      {% if weather_data2 %}
+        <h2>Weather for {{ weather_data2.city }}</h2>
+        <p>Temperature: {{ weather_data2.temperature }} °C</p>
+        <p>Description: {{ weather_data2.description }}</p>
+        <img src="http://openweathermap.org/img/wn/{{ weather_data2.icon }}.png" alt="Weather Icon">
+      {% endif %}
+      
+      {% if error %}
+        <p>{{ error }}</p>
+      {% endif %}
+</body>
+</html>
