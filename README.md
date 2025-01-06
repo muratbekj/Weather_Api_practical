@@ -23,6 +23,7 @@
 ## Details
 ### Api
 
-Create an API_KEY file to store your api key
+Create an account on https://openweathermap.org/ and get your API_KEY,
+With that, create a `API_KEY` file in the project directory and paste your api key in it
 
 
