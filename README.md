@@ -26,4 +26,6 @@
 Create an account on https://openweathermap.org/ and get your API_KEY,
 With that, create a `API_KEY` file in the project directory and paste your api key in it
 
+This is not a personal project but more of a practices project, introduced to using Apis with Django and displayed it onto the views.
+No CSS built
 
